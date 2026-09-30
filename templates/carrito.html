@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Victoria | Mi pedido</title>
+<link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <a href="index.html" class="logo">
+        <div class="logo-icon">V</div>
+
+        <div class="logo-text">
+            <strong>VICTORIA</strong>
+            <span>Panadería & Café</span>
+        </div>
+    </a>
+
+    <div class="mesa">
+        <span>MESA</span>
+        <strong>08</strong>
+    </div>
+
+    <a href="productos.html" class="carrito">
+        <span class="carrito-icono">+</span>
+        <span class="carrito-contador" id="contador-carrito">0</span>
+    </a>
+
+</header>
+
+
+<main>
+
+    <section class="pedido-header">
+
+        <span class="etiqueta">TU PEDIDO</span>
+
+        <h1>Revisá tu pedido.</h1>
+
+        <p>
+            Confirmá que todo esté como querés antes de continuar.
+        </p>
+
+    </section>
+
+
+    <section class="pedido-contenido">
+
+        <div class="pedido-productos">
+
+            <div class="pedido-titulo">
+                <div>
+                    <span class="producto-categoria">MESA 08</span>
+                    <h2>Productos seleccionados</h2>
+                </div>
+
+                <span id="cantidad-productos">0 productos</span>
+            </div>
+
+
+            <div id="lista-carrito">
+
+                <article class="item-carrito">
+
+                    <div class="item-imagen">
+                        <img
+                            src="../static/img/cafe.jpg"
+                            alt="Café"
+                        >
+                    </div>
+
+                    <div class="item-info">
+
+                        <div class="item-superior">
+
+                            <div>
+                                <span class="producto-categoria">
+                                    CAFETERÍA
+                                </span>
+
+                                <h3>Café</h3>
+                            </div>
+
+                            <button
+                                class="btn-eliminar"
+                                type="button"
+                                aria-label="Eliminar Café"
+                            >
+                                ×
+                            </button>
+
+                        </div>
+
+                        <div class="item-inferior">
+
+                            <div class="cantidad">
+
+                                <button
+                                    class="cantidad-btn"
+                                    type="button"
+                                >
+                                    −
+                                </button>
+
+                                <span>1</span>
+
+                                <button
+                                    class="cantidad-btn"
+                                    type="button"
+                                >
+                                    +
+                                </button>
+
+                            </div>
+
+                            <strong class="item-subtotal">
+                                $2.500
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="item-carrito">
+
+                    <div class="item-imagen">
+                        <img
+                            src="../static/img/medialuna.jpg"
+                            alt="Medialunas"
+                        >
+                    </div>
+
+                    <div class="item-info">
+
+                        <div class="item-superior">
+
+                            <div>
+                                <span class="producto-categoria">
+                                    PANADERÍA
+                                </span>
+
+                                <h3>Medialunas</h3>
+                            </div>
+
+                            <button
+                                class="btn-eliminar"
+                                type="button"
+                                aria-label="Eliminar Medialunas"
+                            >
+                                ×
+                            </button>
+
+                        </div>
+
+                        <div class="item-inferior">
+
+                            <div class="cantidad">
+
+                                <button
+                                    class="cantidad-btn"
+                                    type="button"
+                                >
+                                    −
+                                </button>
+
+                                <span>2</span>
+
+                                <button
+                                    class="cantidad-btn"
+                                    type="button"
+                                >
+                                    +
+                                </button>
+
+                            </div>
+
+                            <strong class="item-subtotal">
+                                $3.600
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div id="pedido-vacio" class="pedido-vacio">
+
+                <div class="pedido-vacio-icono">
+                    🛒
+                </div>
+
+                <h3>Tu pedido está vacío</h3>
+
+                <p>
+                    Todavía no agregaste ningún producto.
+                </p>
+
+                <a href="productos.html" class="btn-principal">
+                    Ver menú
+                </a>
+
+            </div>
+
+
+            <a href="productos.html" class="seguir-comprando">
+                ← Seguir viendo el menú
+            </a>
+
+        </div>
+
+
+        <aside class="resumen-pedido">
+
+            <div class="resumen-cabecera">
+
+                <span class="producto-categoria">
+                    RESUMEN
+                </span>
+
+                <h2>Tu pedido</h2>
+
+            </div>
+
+
+            <div class="resumen-linea">
+
+                <span>Productos</span>
+
+                <strong id="subtotal-pedido">
+                    $6.100
+                </strong>
+
+            </div>
+
+
+            <div class="resumen-linea">
+
+                <span>Servicio</span>
+
+                <strong>
+                    Incluido
+                </strong>
+
+            </div>
+
+
+            <div class="resumen-separador"></div>
+
+
+            <div class="resumen-total">
+
+                <span>Total</span>
+
+                <strong id="total-pedido">
+                    $6.100
+                </strong>
+
+            </div>
+
+
+            <div class="resumen-mesa">
+
+                <span>MESA</span>
+
+                <strong>08</strong>
+
+            </div>
+
+
+            <a
+                href="checkout.html"
+                class="btn-principal btn-checkout"
+            >
+                Continuar pedido
+                <span>→</span>
+            </a>
+
+
+            <p class="resumen-nota">
+                Revisá los productos y cantidades antes de confirmar.
+            </p>
+
+        </aside>
+
+    </section>
+
+</main>
+
+
+<div class="pedido-flotante">
+
+    <a href="carrito.html" class="pedido-boton">
+
+        <span class="pedido-circulo">
+            🛒
+        </span>
+
+        <span class="pedido-texto">
+            <small>MI PEDIDO</small>
+            <strong>Ver pedido</strong>
+        </span>
+
+        <span
+            class="pedido-total"
+            id="pedido-total"
+        >
+            $6.100
+        </span>
+
+        <span
+            class="pedido-contador"
+            id="pedido-contador"
+        >
+            3
+        </span>
+
+    </a>
+
+    <span class="pedido-decoracion pedido-decoracion-1"></span>
+    <span class="pedido-decoracion pedido-decoracion-2"></span>
+    <span class="pedido-decoracion pedido-decoracion-3"></span>
+
+</div>
+
+
+<footer class="footer">
+
+    <div class="footer-logo">
+        <strong>VICTORIA</strong>
+        <span>Panadería & Café</span>
+    </div>
+
+    <div class="footer-info">
+        <span>Mesa 08</span>
+        <span>•</span>
+        <span>San Pedro de Jujuy</span>
+    </div>
+
+    <p>
+        Un buen momento empieza con algo rico.
+    </p>
+
+</footer>
+
+
+<script src="../static/js/app.js"></script>
+
+</body>
+</html>

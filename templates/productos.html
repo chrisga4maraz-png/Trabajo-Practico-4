@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Victoria| Menú</title>
+<link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <a href="index.html" class="logo">
+        <div class="logo-icon">P</div>
+
+        <div class="logo-text">
+            <strong>Victoria</strong>
+            <span>Panadería & Café</span>
+        </div>
+    </a>
+
+    <div class="mesa">
+        <span>MESA</span>
+        <strong>08</strong>
+    </div>
+
+    <a href="carrito.html" class="carrito">
+        <span class="carrito-icono">🛒</span>
+        <span class="carrito-contador" id="contador-carrito">0</span>
+    </a>
+
+</header>
+
+
+<main>
+
+    <section class="catalogo-header">
+
+        <span class="etiqueta">NUESTRO MENÚ</span>
+
+        <h1>Elegí algo rico.</h1>
+
+        <p>
+            Explorá nuestras opciones y agregá tus favoritos al pedido.
+        </p>
+
+    </section>
+
+
+    <section class="buscador">
+
+        <label for="buscar-producto">
+            ¿Qué estás buscando?
+        </label>
+
+        <input
+            type="search"
+            id="buscar-producto"
+            placeholder="Buscar café, medialunas, torta..."
+        >
+
+    </section>
+
+
+    <nav class="filtros">
+
+        <button class="activo" data-categoria="todos">
+            Todo
+        </button>
+
+        <button data-categoria="cafeteria">
+            Cafetería
+        </button>
+
+        <button data-categoria="panaderia">
+            Panadería
+        </button>
+
+        <button data-categoria="pasteleria">
+            Pastelería
+        </button>
+
+        <button data-categoria="salados">
+            Salados
+        </button>
+
+        <button data-categoria="bebidas">
+            Bebidas
+        </button>
+
+    </nav>
+
+
+    <!-- CAFETERÍA -->
+
+    <section class="categoria-productos" id="cafeteria">
+
+        <span class="etiqueta">CAFETERÍA</span>
+
+        <h2>Cafés para arrancar bien</h2>
+
+        <div class="productos-grid">
+
+            <article
+                class="producto"
+                data-categoria="cafeteria"
+                data-nombre="café"
+            >
+
+                <div class="producto-imagen">
+                    <img
+                        src="../static/img/cafe.jpg"
+                        alt="Café"
+                    >
+
+                    <span class="producto-tag">
+                        Favorito
+                    </span>
+                </div>
+
+                <div class="producto-info">
+
+                    <span class="producto-categoria">
+                        CAFETERÍA
+                    </span>
+
+                    <h3>Café</h3>
+
+                    <div class="producto-footer">
+
+                        <strong>$2.500</strong>
+
+                        <button
+                            class="btn-agregar"
+                            data-producto="Café"
+                            data-precio="2500"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article
+                class="producto"
+                data-categoria="cafeteria"
+                data-nombre="café con leche"
+            >
+
+                <div class="producto-imagen">
+
+                    <img
+                        src="../static/img/cafe-leche.jpg"
+                        alt="Café con leche"
+                    >
+
+                </div>
+
+                <div class="producto-info">
+
+                    <span class="producto-categoria">
+                        CAFETERÍA
+                    </span>
+
+                    <h3>Café con leche</h3>
+
+                    <div class="producto-footer">
+
+                        <strong>$2.900</strong>
+
+                        <button
+                            class="btn-agregar"
+                            data-producto="Café con leche"
+                            data-precio="2900"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article
+                class="producto"
+                data-categoria="cafeteria"
+                data-nombre="capuchino"
+            >
+
+                <div class="producto-imagen">
+
+                    <img
+                        src="../static/img/capuchino.jpg"
+                        alt="Capuchino"
+                    >
+
+                </div>
+
+                <div class="producto-info">
+
+                    <span class="producto-categoria">
+                        CAFETERÍA
+                    </span>
+
+                    <h3>Capuchino</h3>
+
+                    <div class="producto-footer">
+
+                        <strong>$3.200</strong>
+
+                        <button
+                            class="btn-agregar"
+                            data-producto="Capuchino"
+                            data-precio="3200"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- PANADERÍA -->
+
+    <section class="categoria-productos" id="panaderia">
+
+        <span class="etiqueta">PANADERÍA</span>
+
+        <h2>Recién salido del horno</h2>
+
+        <div class="productos-grid">
+
+            <article
+                class="producto"
+                data-categoria="panaderia"
+                data-nombre="medialunas"
+            >
+
+                <div class="producto-imagen">
+
+                    <img
+                        src="../static/img/medialuna.jpg"
+                        alt="Medialunas"
+                    >
+
+                    <span class="producto-tag">
+                        Clásico
+                    </span>
+
+                </div>
+
+                <div class="producto-info">
+
+                    <span class="producto-categoria">
+                        PANADERÍA
+                    </span>
+
+                    <h3>Medialunas</h3>
+
+                    <div class="producto-footer">
+
+                        <strong>$1.800</strong>
+
+                        <button
+                            class="btn-agregar"
+                            data-producto="Medialunas"
+                            data-precio="1800"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article
+                class="producto"
+                data-categoria="panaderia"
+                data-nombre="croissant"
+            >
+
+                <div class="producto-imagen">
+
+                    <img
+                        src="../static/img/croissant.jpg"
+                        alt="Croissant"
+                    >
+
+                </div>
+
+                <div class="producto-info">
+
+                    <span class="producto-categoria">
+                        PANADERÍA
+                    </span>
+
+                    <h3>Croissant</h3>
+
+                    <div class="producto-footer">
+
+                        <strong>$2.200</strong>
+
+                        <button
+                            class="btn-agregar"
+                            data-producto="Croissant"
+                            data-precio="2200"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article
+                class="producto"
+                data-categoria="panaderia"
+                data-nombre="pan artesanal"
+            >
+
+                <div class="producto-imagen">
+
+                    <img
+                        src="../static/img/pan.jpg"
+                        alt="Pan artesanal"
+                    >
+
+                </div>
+
+                <div class="producto-info">
+
+                    <span class="producto-categoria">
+                        PANADERÍA
+                    </span>
+
+                    <h3>Pan artesanal</h3>
+
+                    <div class="producto-footer">
+
+                        <strong>$2.000</strong>
+
+                        <button
+                            class="btn-agregar"
+                            data-producto="Pan artesanal"
+                            data-precio="2000"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- PASTELERÍA -->
+
+    <section class="categoria-productos" id="pasteleria">
+
+        <span class="etiqueta">PASTELERÍA</span>
+
+        <h2>Para los que quieren algo dulce</h2>
+
+        <div class="productos-grid">
+
+            <article
+                class="producto"
+                data-categoria="pasteleria"
+                data-nombre="porción de torta"
+            >
+
+                <div class="producto-imagen">
+
+                    <img
+                        src="../static/img/torta.jpg"
+                        alt="Porción de torta"
+                    >
+
+                    <span class="producto-tag">
+                        Dulce
+                    </span>
+
+                </div>
+
+                <div class="producto-info">
+
+                    <span class="producto-categoria">
+                        PASTELERÍA
+                    </span>
+
+                    <h3>Porción de torta</h3>
+
+                    <div class="producto-footer">
+
+                        <strong>$3.200</strong>
+
+                        <button
+                            class="btn-agregar"
+                            data-producto="Porción de torta"
+                            data-precio="3200"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article
+                class="producto"
+                data-categoria="pasteleria"
+                data-nombre="cheesecake"
+            >
+
+                <div class="producto-imagen">
+
+                    <img
+                        src="../static/img/cheesecake.jpg"
+                        alt="Cheesecake"
+                    >
+
+                </div>
+
+                <div class="producto-info">
+
+                    <span class="producto-categoria">
+                        PASTELERÍA
+                    </span>
+
+                    <h3>Cheesecake</h3>
+
+                    <div class="producto-footer">
+
+                        <strong>$3.500</strong>
+
+                        <button
+                            class="btn-agregar"
+                            data-producto="Cheesecake"
+                            data-precio="3500"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article
+                class="producto"
+                data-categoria="pasteleria"
+                data-nombre="alfajor"
+            >
+
+                <div class="producto-imagen">
+
+                    <img
+                        src="../static/img/alfajor.jpg"
+                        alt="Alfajor"
+                    >
+
+                </div>
+
+                <div class="producto-info">
+
+                    <span class="producto-categoria">
+                        PASTELERÍA
+                    </span>
+
+                    <h3>Alfajor</h3>
+
+                    <div class="producto-footer">
+
+                        <strong>$1.600</strong>
+
+                        <button
+                            class="btn-agregar"
+                            data-producto="Alfajor"
+                            data-precio="1600"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- SALADOS -->
+
+    <section class="categoria-productos" id="salados">
+
+        <span class="etiqueta">SALADOS</span>
+
+        <h2>Cuando pinta algo salado</h2>
+
+        <div class="productos-grid">
+
+            <article
+                class="producto"
+                data-categoria="salados"
+                data-nombre="sándwich"
+            >
+
+                <div class="producto-imagen">
+
+                    <img
+                        src="../static/img/sandwich.jpg"
+                        alt="Sándwich"
+                    >
+
+                </div>
+
+                <div class="producto-info">
+
+                    <span class="producto-categoria">
+                        SALADOS
+                    </span>
+
+                    <h3>Sándwich</h3>
+
+                    <div class="producto-footer">
+
+                        <strong>$4.500</strong>
+
+                        <button
+                            class="btn-agregar"
+                            data-producto="Sándwich"
+                            data-precio="4500"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article
+                class="producto"
+                data-categoria="salados"
+                data-nombre="tostado"
+            >
+
+                <div class="producto-imagen">
+
+                    <img
+                        src="../static/img/tostado.jpg"
+                        alt="Tostado"
+                    >
+
+                </div>
+
+                <div class="producto-info">
+
+                    <span class="producto-categoria">
+                        SALADOS
+                    </span>
+
+                    <h3>Tostado</h3>
+
+                    <div class="producto-footer">
+
+                        <strong>$4.000</strong>
+
+                        <button
+                            class="btn-agregar"
+                            data-producto="Tostado"
+                            data-precio="4000"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- BEBIDAS -->
+
+    <section class="categoria-productos" id="bebidas">
+
+        <span class="etiqueta">BEBIDAS</span>
+
+        <h2>Algo fresco para acompañar</h2>
+
+        <div class="productos-grid">
+
+            <article
+                class="producto"
+                data-categoria="bebidas"
+                data-nombre="jugo natural"
+            >
+
+                <div class="producto-imagen">
+
+                    <img
+                        src="../static/img/jugo.jpg"
+                        alt="Jugo natural"
+                    >
+
+                </div>
+
+                <div class="producto-info">
+
+                    <span class="producto-categoria">
+                        BEBIDAS
+                    </span>
+
+                    <h3>Jugo natural</h3>
+
+                    <div class="producto-footer">
+
+                        <strong>$2.800</strong>
+
+                        <button
+                            class="btn-agregar"
+                            data-producto="Jugo natural"
+                            data-precio="2800"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article
+                class="producto"
+                data-categoria="bebidas"
+                data-nombre="gaseosa"
+            >
+
+                <div class="producto-imagen">
+
+                    <img
+                        src="../static/img/gaseosa.jpg"
+                        alt="Gaseosa"
+                    >
+
+                </div>
+
+                <div class="producto-info">
+
+                    <span class="producto-categoria">
+                        BEBIDAS
+                    </span>
+
+                    <h3>Gaseosa</h3>
+
+                    <div class="producto-footer">
+
+                        <strong>$2.500</strong>
+
+                        <button
+                            class="btn-agregar"
+                            data-producto="Gaseosa"
+                            data-precio="2500"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- PEDIDO FLOTANTE -->
+
+<div class="pedido-flotante">
+
+    <a href="carrito.html" class="pedido-boton">
+
+        <span class="pedido-circulo">
+            🛒
+        </span>
+
+        <span class="pedido-texto">
+            <small>MI PEDIDO</small>
+            <strong>Ver pedido</strong>
+        </span>
+
+        <span class="pedido-total" id="pedido-total">
+            $0
+        </span>
+
+        <span class="pedido-contador" id="pedido-contador">
+            0
+        </span>
+
+    </a>
+
+    <span class="pedido-decoracion pedido-decoracion-1"></span>
+    <span class="pedido-decoracion pedido-decoracion-2"></span>
+    <span class="pedido-decoracion pedido-decoracion-3"></span>
+
+</div>
+
+
+<footer class="footer">
+
+    <div class="footer-logo">
+        <strong>Victoria</strong>
+        <span>Panadería & Café</span>
+    </div>
+
+    <div class="footer-info">
+        <span>Mesa 08</span>
+        <span>•</span>
+        <span>San Pedro de Jujuy</span>
+    </div>
+
+    <p>
+        Un buen momento empieza con algo rico.
+    </p>
+
+</footer>
+
+
+<script src="../static/js/app.js"></script>
+
+</body>
+</html>

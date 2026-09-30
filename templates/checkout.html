@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Victoria | Confirmar pedido</title>
+<link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <a href="index.html" class="logo">
+        <div class="logo-icon">V</div>
+
+        <div class="logo-text">
+            <strong>VICTORIA</strong>
+            <span>Panadería & Café</span>
+        </div>
+    </a>
+
+    <div class="mesa">
+        <span>MESA</span>
+        <strong>08</strong>
+    </div>
+
+    <a href="carrito.html" class="carrito">
+        <span class="carrito-icono">🛒</span>
+        <span class="carrito-contador" id="contador-carrito">0</span>
+    </a>
+
+</header>
+
+
+<main>
+
+    <section class="checkout">
+
+        <div class="checkout-header">
+
+            <span class="etiqueta">ÚLTIMO PASO</span>
+
+            <h1>Confirmá tu pedido.</h1>
+
+            <p>
+                Completá tus datos y contanos cómo querés recibirlo.
+            </p>
+
+        </div>
+
+
+        <div class="checkout-contenido">
+
+            <form class="formulario-checkout" id="formulario-checkout">
+
+                <div class="bloque-formulario">
+
+                    <span class="producto-categoria">
+                        TUS DATOS
+                    </span>
+
+                    <h2>¿A nombre de quién?</h2>
+
+                    <div class="campo">
+
+                        <label for="nombre">
+                            Nombre
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            placeholder="Escribí tu nombre"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="telefono">
+                            Teléfono
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="telefono"
+                            name="telefono"
+                            placeholder="Ej: 388 123 4567"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="bloque-formulario">
+
+                    <span class="producto-categoria">
+                        ENTREGA
+                    </span>
+
+                    <h2>¿Dónde lo recibís?</h2>
+
+                    <div class="opciones-entrega">
+
+                        <label class="opcion-entrega">
+
+                            <input
+                                type="radio"
+                                name="entrega"
+                                value="mesa"
+                                checked
+                            >
+
+                            <span class="opcion-contenido">
+
+                                <strong>
+                                    En mi mesa
+                                </strong>
+
+                                <small>
+                                    Llevar a la mesa 08
+                                </small>
+
+                            </span>
+
+                        </label>
+
+
+                        <label class="opcion-entrega">
+
+                            <input
+                                type="radio"
+                                name="entrega"
+                                value="retirar"
+                            >
+
+                            <span class="opcion-contenido">
+
+                                <strong>
+                                    Retirar en mostrador
+                                </strong>
+
+                                <small>
+                                    Paso a buscar mi pedido
+                                </small>
+
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="bloque-formulario">
+
+                    <span class="producto-categoria">
+                        DETALLES
+                    </span>
+
+                    <h2>¿Algo más?</h2>
+
+                    <div class="campo">
+
+                        <label for="observaciones">
+                            Observaciones
+                        </label>
+
+                        <textarea
+                            id="observaciones"
+                            name="observaciones"
+                            rows="4"
+                            placeholder="Ej: sin azúcar, agregar servilletas..."
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+
+            <aside class="resumen-checkout">
+
+                <div class="resumen-caja">
+
+                    <div class="resumen-cabecera">
+
+                        <span class="producto-categoria">
+                            MESA 08
+                        </span>
+
+                        <h2>Resumen del pedido</h2>
+
+                    </div>
+
+
+                    <div
+                        class="resumen-items"
+                        id="resumen-checkout"
+                    >
+
+                        <div class="resumen-item">
+
+                            <div>
+
+                                <strong>Café</strong>
+
+                                <span>
+                                    1 × $2.500
+                                </span>
+
+                            </div>
+
+                            <strong>
+                                $2.500
+                            </strong>
+
+                        </div>
+
+
+                        <div class="resumen-item">
+
+                            <div>
+
+                                <strong>Medialunas</strong>
+
+                                <span>
+                                    2 × $1.800
+                                </span>
+
+                            </div>
+
+                            <strong>
+                                $3.600
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="resumen-linea">
+
+                        <span>Productos</span>
+
+                        <strong id="subtotal-checkout">
+                            $6.100
+                        </strong>
+
+                    </div>
+
+
+                    <div class="resumen-linea">
+
+                        <span>Servicio</span>
+
+                        <strong>
+                            Incluido
+                        </strong>
+
+                    </div>
+
+
+                    <div class="resumen-separador"></div>
+
+
+                    <div class="resumen-total">
+
+                        <span>Total</span>
+
+                        <strong id="total-checkout">
+                            $6.100
+                        </strong>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        form="formulario-checkout"
+                        class="btn-principal btn-confirmar"
+                        id="confirmar-pedido"
+                    >
+                        Confirmar pedido
+                        <span>→</span>
+                    </button>
+
+
+                    <a
+                        href="carrito.html"
+                        class="volver-carrito"
+                    >
+                        ← Volver al pedido
+                    </a>
+
+                </div>
+
+
+                <div class="checkout-seguridad">
+
+                    <span>✓</span>
+
+                    <p>
+                        Tu pedido se prepara después de la confirmación.
+                    </p>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<div class="pedido-flotante">
+
+    <a href="carrito.html" class="pedido-boton">
+
+        <span class="pedido-circulo">
+            🛒
+        </span>
+
+        <span class="pedido-texto">
+            <small>MI PEDIDO</small>
+            <strong>Ver pedido</strong>
+        </span>
+
+        <span
+            class="pedido-total"
+            id="pedido-total"
+        >
+            $6.100
+        </span>
+
+        <span
+            class="pedido-contador"
+            id="pedido-contador"
+        >
+            3
+        </span>
+
+    </a>
+
+    <span class="pedido-decoracion pedido-decoracion-1"></span>
+    <span class="pedido-decoracion pedido-decoracion-2"></span>
+    <span class="pedido-decoracion pedido-decoracion-3"></span>
+
+</div>
+
+
+<div
+    class="modal-confirmacion"
+    id="modal-confirmacion"
+>
+
+    <div class="modal-contenido">
+
+        <div class="modal-icono">
+            ✓
+        </div>
+
+        <span class="etiqueta">
+            PEDIDO CONFIRMADO
+        </span>
+
+        <h2>¡Pedido recibido!</h2>
+
+        <p>
+            Tu pedido fue registrado correctamente.
+        </p>
+
+        <div class="numero-pedido">
+
+            <span>Pedido</span>
+
+            <strong id="numero-pedido">
+                #001
+            </strong>
+
+        </div>
+
+        <a
+            href="index.html"
+            class="btn-principal"
+        >
+            Volver al inicio
+        </a>
+
+    </div>
+
+</div>
+
+
+<footer class="footer">
+
+    <div class="footer-logo">
+        <strong>VICTORIA</strong>
+        <span>Panadería & Café</span>
+    </div>
+
+    <div class="footer-info">
+        <span>Mesa 08</span>
+        <span>•</span>
+        <span>San Pedro de Jujuy</span>
+    </div>
+
+    <p>
+        Un buen momento empieza con algo rico.
+    </p>
+
+</footer>
+
+
+<script src="../static/js/app.js"></script>
+
+</body>
+</html>
